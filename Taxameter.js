@@ -17,22 +17,43 @@
 class Taxameter {
 
     constructor() {
-        this.afstand = 0;
-        this.turStartetTidspunkt = undefined;
+//De forskellige priser det koster.
+        this.timePris=kttimePris;
+        this.kmPris=ktkmPris;
+        this.startPris=ktstartPris;
+//Variablen afstand bruges til beregning af km.
+        this.afstand=0;
+//Til at vise priserne.
+        this.turSluttetTidspunkt=undefined;
+  
     }
 
     startTur() {
         this.turStartetTidspunkt = new Date();
+        this.turSluttetTidspunkt = new Date();
     }
 
     slutTur() {
-
+        this.turStartetTidspunkt = undefined;
+        this.turSluttetTidspunkt = undefined;
+        this.afstand=0;
     }
 
+    
     koer(delta_afst) {
-    }
+    this.afstand+=delta_afst;
+
+}
 
     beregnPris() {
-        return 0;
+
+this.turSluttetTidspunkt = new Date();
+this.pris1 = this.turSluttetTidspunkt-this.turStartetTidspunkt;
+this.pris1 = parseInt(this.pris1/1000);
+this.pris1*=this.timePris/60;
+this.pris2=this.afstand*this.kmPris;
+this.pris=this.pris1+Math.round(this.pris2*100)/100;
+this.pris+=this.startPris;
+        return this.pris;
     }
 }

@@ -3,18 +3,12 @@
  * og som I ikke skal ændre ved i denne opgave. Til gengæld kunne man forestille 
  * sig at der her blev indsat et
  */
+var kttimePris=7;
+var ktkmPris=4.5;
+var ktstartPris=75;
 
-var kttimePris=6.25;
-var ktkmPris=5;
-var ktstartPris=39;
-
-
-var taxaGang = new Taxameter();
-start(taxaGang);
+start(new Taxameter());
 
 function global(){
-console.log(taxaGang.kmPris);
-if (taxaGang.afstand<=1){
-taxaGang.kmPris=5;
-} else {taxaGang.kmPris=9;}
+
 }

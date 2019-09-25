@@ -1,30 +1,18 @@
 # Taxameter.js
-## En opgave i Strategy Pattern
+Lavet af Sara Tims Michaelsen
 
 ### Opgave 1
-KroneTaxa skal have udviklet et nyt stykke software til at beregne prisen på en taxa tur, og har bedt dig om hjælp. De har allerede et gammelt system til at vise data'en og interagere med systemet - altså skal de bare have hjælp til en lille del af systemet.
-
-Deres prismodel er rimelig simpel: 8,50 kr/km + 6,25 kr/min + 39 kr
-
-Implementér (dvs. færdiggør, udfyld de tomme funktioner) klassen Taxameter.js, herunder KroneTaxas prismodel.
+Har bare tilføjet new date() til både start og slut, derefter minusset dem sammen, for at få tiden mellem dem, derefter dividerer jeg med 1000 da det er millisekunder.
+For hastigheden har jeg bare brugt det system der allerede er i start.js, .
 
 ### Opgave 2
-KroneTaxa vil også gerne bruge systemet til deres store vogne. Her er prisen: 12 kr/km + 6,67 kr/min + 69 kr.
-
-Lav filerne krone-taxa-stor-vogn.js og krone-taxa-stor-vogn.html, og lav Taxameter.js om så den kan genbruges til både normale og store vogne. (Hint: Strategy Pattern. )
+Har bare gjort så der er 3 variabler der bestemmer pris, og ændret en lille smule i Taxameter.js.
 
 
 ### Opgave 3
-KroneTaxas konkurrent CityBilen vil gerne købe dit system. De bruger samme brugergrænseflade, så det er lige til at sætte i deres biler. Dog er deres priser en smule anderledes: 4,50 kr pr. påbegyndt km + 7 kr pr. minut, og der er en minimumspris på 75 kr.
-
-Lav filerne city-bilen.js og city-bilen.html, og lav Taxameter.js om så den kan genbruges til alle 3 systemer.
-
+Puttede bare krone-taxa.js og krone-taxa.html, ændrede html filen til den rigtige .js fil, og så kiggede jeg på nogle variable
 
 ### Opgave 4
-KroneTaxas vil gerne være mere konkurrencedygtige på korte ture med normale vogn, og vil gerne ændre deres km pris til:
-5 kr for den første km, derefter 9 kr/km.
-
-Lav de nødvendige ændringer i krone-taxa.js
 
 
 ### Bonus opgave 1 (overkommelig)
